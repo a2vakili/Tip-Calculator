@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 @property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalAmountBill;
 
 @end
 
@@ -38,10 +39,14 @@
 //    NSString *mystring= [NSString stringWithFormat:@"%0.2f",tipCalculated];
 //    self.tipAmountLabel.text = mystring;
     NSNumberFormatter *numberformat= [[NSNumberFormatter  alloc] init];
+    NSNumberFormatter *currencyformat= [[NSNumberFormatter alloc]init];
     
     numberformat.numberStyle= NSNumberFormatterDecimalStyle;
-    NSNumber *billTotal= [numberformat numberFromString:self.billAmountTextField.text];
+    currencyformat.numberStyle= NSNumberFormatterCurrencyStyle;
+    NSNumber *billTotal= [currencyformat  numberFromString:self.billAmountTextField.text];
     NSNumber *percentagetip= [numberformat numberFromString:self.tipPercentageTextField.text];
+  
+
     
     if (billTotal == nil || percentagetip== nil){
         self.tipAmountLabel.text= @"please enter a valid number";
@@ -50,8 +55,11 @@
         double billAmountEntered=  [billTotal doubleValue ];
         double tipPercentageEntered= [percentagetip doubleValue]  /100;
         double tipCalculated= billAmountEntered * tipPercentageEntered;
-        NSString *mytipInString= [NSString stringWithFormat:@"%0.2f",tipCalculated];
+        NSString *mytipInString= [NSString stringWithFormat:@"$%0.2f",tipCalculated];
         self.tipAmountLabel.text= mytipInString;
+        double totalAmountBill= billAmountEntered + tipCalculated;
+        NSString *myBillInString= [NSString stringWithFormat:@"$%0.1f",totalAmountBill];
+        self.totalAmountBill.text= myBillInString;
     }
 
 

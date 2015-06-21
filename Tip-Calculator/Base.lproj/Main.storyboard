@@ -97,18 +97,34 @@
                                     <action selector="calculateTip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8XL-Mu-bXL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyW-E1-2QG">
+                                <rect key="frame" x="115" y="423" width="84" height="30"/>
+                                <color key="backgroundColor" red="0.19597086080000001" green="0.73333333329999995" blue="0.1665643765" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill amount including tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y60-4G-3g1">
+                                <rect key="frame" x="69" y="366" width="193" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="l9T-9k-8y5" secondAttribute="centerX" id="1zx-7J-G1e"/>
                             <constraint firstItem="fjl-5u-Ilv" firstAttribute="top" secondItem="tdB-Qe-Fat" secondAttribute="bottom" constant="74" id="6Uk-pg-040"/>
                             <constraint firstItem="6yb-Y1-Qkb" firstAttribute="top" secondItem="qAT-co-l9J" secondAttribute="bottom" constant="8" id="6c5-vb-y1A"/>
+                            <constraint firstAttribute="centerX" secondItem="Y60-4G-3g1" secondAttribute="centerX" id="8Ii-Hp-83s"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iud-Wb-Bfm" secondAttribute="bottom" constant="54" id="MLh-If-1Kk"/>
                             <constraint firstAttribute="centerX" secondItem="iud-Wb-Bfm" secondAttribute="centerX" id="QGf-OE-ddh"/>
                             <constraint firstItem="qAT-co-l9J" firstAttribute="top" secondItem="7zT-Gf-hVQ" secondAttribute="bottom" constant="8" id="Qe5-uU-4rx"/>
+                            <constraint firstItem="Y60-4G-3g1" firstAttribute="top" secondItem="fjl-5u-Ilv" secondAttribute="bottom" constant="29" id="Vh6-4V-OXW"/>
                             <constraint firstAttribute="centerX" secondItem="tdB-Qe-Fat" secondAttribute="centerX" id="Z1j-Tf-yNy"/>
                             <constraint firstAttribute="centerX" secondItem="7zT-Gf-hVQ" secondAttribute="centerX" id="buK-Vu-pMn"/>
                             <constraint firstAttribute="centerX" secondItem="fjl-5u-Ilv" secondAttribute="centerX" id="f5e-Xy-aWy"/>
+                            <constraint firstAttribute="centerX" secondItem="Y60-4G-3g1" secondAttribute="centerX" id="gkW-33-Sjm"/>
                             <constraint firstItem="7zT-Gf-hVQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="14" id="hSO-WF-zjL"/>
                             <constraint firstAttribute="centerX" secondItem="PnP-5l-JYv" secondAttribute="centerX" id="mhB-iL-GS5"/>
                             <constraint firstItem="PnP-5l-JYv" firstAttribute="top" secondItem="6yb-Y1-Qkb" secondAttribute="bottom" constant="8" id="oo1-5U-Ozm"/>
@@ -122,6 +138,7 @@
                         <outlet property="billAmountTextField" destination="6yb-Y1-Qkb" id="rYJ-jM-8ot"/>
                         <outlet property="tipAmountLabel" destination="fjl-5u-Ilv" id="n03-tt-V7i"/>
                         <outlet property="tipPercentageTextField" destination="l9T-9k-8y5" id="864-ug-QgI"/>
+                        <outlet property="totalAmountBill" destination="ZyW-E1-2QG" id="m6R-DX-Zdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
